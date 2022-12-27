@@ -2,6 +2,8 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Main from 'components/Main';
 import Header from 'components/Header';
+import Footer from "components/Footer";
+import Router from "components/Router";
 
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -46,7 +48,8 @@ function App() {
     <>
   
   <Header/>
-  <Main/>
+  <Router></Router>
+  <Footer/>
   <GlobalStyle/>
   </>
   )

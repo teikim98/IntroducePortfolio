@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { Link, useLocation } from "react-router-dom";
 
-export default function Main() {
-  const Header = styled.header`
+const HeaderNav = styled.header`
     position: fixed;
+    height: 70px;   
     width: 100%;
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: ${props => props.theme.bgColor};
+    background-color: ${(props) => props.theme.bgColor};
     z-index: 999;
   `;
   const Nav = styled.nav`
@@ -45,24 +46,28 @@ export default function Main() {
             background-color: gray;
             transition: all 0.6s ease 0.3s;
           }
-          &:hover{
+          &:hover {
             color: tomato;
           }
-          &.active{
+          &.active {
             left: 0;
             height: 0;
-            background-color: ${props => props.theme.textColor};
+            background-color: cyan; 
             height: 100%;
             z-index: 100;
-            color: ${props => props.theme.bgColor};
-            }
+            color: ${(props) => props.theme.bgColor};
+          }
         }
       }
     }
   `;
 
+
+export default function Header() {
+    const location = useLocation().pathname;
+
   return (
-    <Header>
+    <HeaderNav>
       <Nav>
         <div className="logo">
           <a href="#">goHome</a>
@@ -70,20 +75,20 @@ export default function Main() {
         <div className="menu">
           <ul>
             <li>
-              <a href="">Home</a>
+              <Link to="/" className={location === "Home" || location === "/" ? "active" : ""}>Home</Link>
             </li>
             <li>
-              <a href="">About</a>
+              <Link to="/About" className={location === "/About" ? "active" : ""}>About</Link>
             </li>
             <li>
-              <a href="">Project</a>
+              <Link to="/Project" className={location === "/Project" ? "active" : ""}>Project</Link>
             </li>
             <li>
-              <a href="">Board</a>
+              <Link to="/Board">Board</Link>
             </li>
           </ul>
         </div>
       </Nav>
-    </Header>
+    </HeaderNav>
   );
 }
