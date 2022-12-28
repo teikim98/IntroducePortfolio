@@ -1,5 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet,useLocation } from "react-router-dom";
 import styled from "styled-components";
+import Img from 'img/HomeImg.webp'
 
 const Container = styled.main`
   position: absolute;
@@ -9,35 +10,49 @@ const Container = styled.main`
   right: 70px;
   overflow: hidden;
   & > div {
-    height: 100%;
+    height: 100%; 
     display: flex;
   }
 `;
 const Picture = styled.div`
-  width: 43%;
+    &.active{
+        width: 43%;
+    }
   position: relative;
   & > img {
     width: 100%;
     height: 100%;
     object-fit: fill;
   }
+  width: 0%;
+  transition: 0.5s;
 `;
 const Contents = styled.div`
-  width: calc(100% - 35%);
+  width: 100%;
   background-color: tomato;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
   }
+  &.onActive{
+    width: calc(100%-35%);
+  }
+  transition: 0.5s;
 `;
+
+
 function Layout() {
+
+
+const location = useLocation().pathname;
+
   return (
     <Container>
       <div>
-        <Picture>
-          <img src={''} alt='MainPic'></img>
+        <Picture className={location === "Home" || location === "/" ? "active" : ""}>
+          <img src={Img} alt='BigBen'></img>
         </Picture>
-        <Contents>
+        <Contents className={location === "Home" || location === "/" ? "onActive" : ""}>
           <Outlet />
         </Contents>
       </div>

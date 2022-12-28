@@ -84,7 +84,7 @@ export default function Header() {
               <Link to="/Project" className={location === "/Project" ? "active" : ""}>Project</Link>
             </li>
             <li>
-              <Link to="/Board">Board</Link>
+              <Link to="/Board" className={location === "/Board" ? "active" : ""}>Board</Link>
             </li>
           </ul>
         </div>
