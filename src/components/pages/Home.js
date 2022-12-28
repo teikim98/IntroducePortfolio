@@ -115,10 +115,10 @@ const AnimatedCharacters = (props) => {
 };
 
 const placeholderText = [
-  { type: "heading1", text: "Framer Motion" },
+  { type: "heading1", text: "포트폴리오 프로젝트" },
   {
     type: "heading2",
-    text: "Animating responsive text!",
+    text: "Test is going Ahead",
   },
 ];
 
