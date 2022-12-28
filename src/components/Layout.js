@@ -2,6 +2,7 @@ import { Outlet,useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Img from 'img/HomeImg.webp'
 
+//전체 컨테이너
 const Container = styled.main`
   position: absolute;
   top: 70px;
@@ -14,6 +15,7 @@ const Container = styled.main`
     display: flex;
   }
 `;
+//사진 구역
 const Picture = styled.div`
     &.active{
         width: 43%;
@@ -27,6 +29,7 @@ const Picture = styled.div`
   width: 0%;
   transition: 0.5s;
 `;
+//컨텐츠 
 const Contents = styled.div`
   width: 100%;
   background-color: tomato;

@@ -5,6 +5,7 @@ import Header from 'components/Header';
 import Footer from "components/Footer";
 import Router from "components/Router";
 
+//글로벌 스타일
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
