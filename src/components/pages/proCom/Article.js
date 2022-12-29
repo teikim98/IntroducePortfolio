@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { data } from "./data";
+import { FaBeer } from 'react-icons/fa';
+
 
 const Article = ({ id }) => {
   const { category, title } = data.find((data) => data.id === id);
@@ -14,7 +16,7 @@ const Article = ({ id }) => {
     >
       
       <motion.div layoutId={`item-motion-${id}`}>
-        <Link to="/">Back</Link>
+        <Link to="/"><FaBeer/>Go Back</Link>
         <motion.div className="image-motion" layoutId={`image-motion-${id}`}>
           <img className="image" src={`./images/${id}.jpeg`} alt={id} />
         </motion.div>
