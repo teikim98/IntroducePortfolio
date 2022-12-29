@@ -32,7 +32,6 @@ const MotionWrapper = styled.div`
     white-space: nowrap;
   }
 `;
-
 const Wrapper = (props) => {
   // We'll do this to prevent wrapping of words using CSS
   return <span className="word-wrapper">{props.children}</span>;
