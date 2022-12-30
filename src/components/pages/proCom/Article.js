@@ -32,6 +32,7 @@ const Article = ({ id }) => {
       </motion.div>{" "}
      
     </motion.div>
+
   );
 };
 
