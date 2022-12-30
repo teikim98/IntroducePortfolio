@@ -11,7 +11,7 @@ const HeaderNav = styled.header`
   left: 0;
   bottom: 0;
   background-color: ${(props) => props.theme.bgColor};
-  z-index: 999;
+  z-index: 1;
 `;
 //네비 컨테이너
 const Nav = styled.nav`

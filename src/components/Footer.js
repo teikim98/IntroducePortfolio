@@ -6,7 +6,7 @@ const FooterBar = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
   position: fixed;
   padding: 0 70px;
 `;

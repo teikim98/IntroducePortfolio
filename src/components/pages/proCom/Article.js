@@ -16,9 +16,9 @@ const Article = ({ id }) => {
     >
       
       <motion.div layoutId={`item-motion-${id}`}>
-        <Link to="/"><FaBeer/>Go Back</Link>
+        <Link to="/Project"><FaBeer/>Go Back</Link>
         <motion.div className="image-motion" layoutId={`image-motion-${id}`}>
-          <img className="image" src={`./images/${id}.jpeg`} alt={id} />
+          <img className="image" src={`./images/${id}.jpeg`} alt='' />
         </motion.div>
         <div className="content">
           <motion.div className="title-motion" layoutId={`title-motion-${id}`}>

@@ -3,11 +3,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const Container = styled.section`
     
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 70px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
 
 `;
+
+const Introduce = styled.motion.div`
+
+    margin-bottom: 2rem;
+`
 
 const list = {
     hidden: {
@@ -17,7 +22,8 @@ const list = {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        duration : 0.5
       }
     }
   };
@@ -31,10 +37,11 @@ const list = {
 function About() {
   return (
     <Container>
+      <Introduce variants={list} initial ='hidden' animate='visible'>
+        
+      </Introduce>
        <motion.ul variants={list} initial="hidden" animate="visible">
-        <motion.li variants={item}>item 1</motion.li>
-        <motion.li variants={item}>item 2</motion.li>
-        <motion.li variants={item}>item 3</motion.li>
+        <motion.li variants={item}>저는 이런 사람입니다 ... +++ 이런 가치관과 세계관을 가지고 있습니다 ... ++++ </motion.li>
       </motion.ul>
      </Container>
   );
