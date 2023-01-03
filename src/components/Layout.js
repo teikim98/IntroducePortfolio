@@ -24,10 +24,11 @@ const Container = styled.main`
 `;
 //사진 구역
 const Picture = styled.div`
-    
+  
     .bgCover{
         background-size: cover;
         height: 650px;
+        border-radius: 3vmin;
     }
     
   margin-right: 25px;
@@ -45,6 +46,7 @@ const Picture = styled.div`
 `;
 //컨텐츠
 const Contents = styled.div`
+  border-radius: 3vmin;
   width: 100%;
   background-color: tomato;
   overflow-y: scroll;

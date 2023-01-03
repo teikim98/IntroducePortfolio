@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { data } from "./data";
 
-const exitModal = () =>{
-  
-}
-
 
 const Article = ({ id }) => {
   const { category, title } = data.find((data) => data.id === id);
@@ -33,6 +29,7 @@ const Article = ({ id }) => {
         </div>
       </motion.div>{" "}
     </motion.div>
+    
 
   );
 };

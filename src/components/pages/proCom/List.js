@@ -2,9 +2,30 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { data } from "./data";
 
+
+const projectList = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+      duration: 0.3,
+    },
+  },
+};
+
+const projectItem = {
+  hidden: { opacity: 0, x: 100 },
+  visible: { opacity: 1, x: 0 },
+};
+  
+
 const Item = ({ id, title, category, isSelected }) => {
   return (
-    <li className="item">
+    <motion.li className="item"  variants={projectItem}>
       <motion.div layoutId={`item-motion-${id}`}>
         <Link to={`/Project/${id}`} className="link">
           <div className="content">
@@ -25,17 +46,17 @@ const Item = ({ id, title, category, isSelected }) => {
           </div>
         </Link>
       </motion.div>
-    </li>
+    </motion.li>
   );
 };
 
 const List = ({ selectedId }) => {
   return (
-    <ul className="list">
+    <motion.ul className="list" variants={projectList} initial="hidden" animate="visible" >
       {data.map((item) => (
-        <Item key={item.id} {...item} isSelected={item.id === selectedId} />
+        <Item key={item.id} {...item} isSelected={item.id === selectedId}/>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 

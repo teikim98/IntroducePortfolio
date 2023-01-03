@@ -22,6 +22,13 @@ export const data = [
       title: "Test 123",
       pointOfInterest: 260,
       backgroundColor: "#5DBCD2"
+    },
+    {
+      id: "choco",
+      category: "brownie",
+      title: "Test 123",
+      pointOfInterest: 500,
+      backgroundColor: "#5DBCD2"
     }
   ];
   

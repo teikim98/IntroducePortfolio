@@ -1,7 +1,7 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   column-gap: 3vmin;
   row-gap: 3vmin;
 }
@@ -74,12 +74,6 @@
     position: relative;
     color: #fff;
   }
-
-  &:nth-child(4n + 1),
-  &:nth-child(4n + 4) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
   
   .category {
     font-size: 80%;
@@ -93,7 +87,7 @@
 .modal {
   z-index: 10;
   position: fixed;
-  padding: 5vmin;
+  padding: 5vmin 40vmin;
   background: rgba(0, 0, 0, 0.7);
   will-change: opacity;
   top: 0;
