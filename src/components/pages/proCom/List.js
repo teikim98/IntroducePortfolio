@@ -41,7 +41,7 @@ const Item = ({ id, title, category, isSelected }) => {
               aria-hidden="true"
               layoutId={`image-motion-${id}`}
             >
-              <img className="image" src={`./images/${id}.jpeg`} alt="" />
+              <img className="image" src={require(`./images/${id}.jpeg`)} alt="" />
             </motion.div>
           </div>
         </Link>

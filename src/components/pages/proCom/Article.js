@@ -7,7 +7,7 @@ const Article = ({ id }) => {
   const { category, title } = data.find((data) => data.id === id);
 
   return (
-    <motion.div
+    <motion.div 
       className="modal"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -16,7 +16,7 @@ const Article = ({ id }) => {
       <motion.div layoutId={`item-motion-${id}`}>
         <Link to="/Project">Go Back</Link>
         <motion.div className="image-motion" layoutId={`image-motion-${id}`}>
-          <img className="image" src={`./images/${id}.jpeg`} alt='' />
+          <img className="image" src={require(`./images/${id}.jpeg`)} alt="" />
         </motion.div>
         <div className="content">
           <motion.div className="title-motion" layoutId={`title-motion-${id}`}>
