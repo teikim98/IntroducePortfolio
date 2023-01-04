@@ -12,7 +12,6 @@ export default function Router() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/IntroducePortfolio/" element={<Home />} />
         <Route path="/Board" element={<Board />} />
         <Route path="/Board/write" element={<BoardWrite />} />
         <Route path='/board/:id' element={<BoardDetail />} />
