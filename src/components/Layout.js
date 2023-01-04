@@ -31,9 +31,10 @@ const Picture = styled.div`
         border-radius: 3vmin;
     }
     
-  margin-right: 25px;
+  
   &.active {
     width: 30%;
+    margin-right: 25px;
   }
   position: relative;
   & > img {

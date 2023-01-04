@@ -12,7 +12,7 @@ const projectList = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.2,
-      duration: 0.3,
+      duration: 0.1,
     },
   },
 };
@@ -21,7 +21,7 @@ const projectItem = {
   hidden: { opacity: 0, x: 100 },
   visible: { opacity: 1, x: 0 },
 };
-  
+
 
 const Item = ({ id, title, category, isSelected }) => {
   return (
