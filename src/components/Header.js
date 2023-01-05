@@ -10,7 +10,6 @@ const HeaderNav = styled.header`
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: ${(props) => props.theme.bgColor};
   z-index: 1;
 `;
 //네비 컨테이너
@@ -31,7 +30,10 @@ const Nav = styled.nav`
     box-shadow:   -5px 0 0 0 black,
                   5px 0 0 0 black,
                   0 -5px 0 0 black,
-                  0 5px 0 0 black; 
+                  0 5px 0 0 black,
+                  -3px -3px 0 3px #a3a3a3 inset;
+                  
+                  
     ul {
       display: flex;
     }
@@ -60,10 +62,8 @@ const Nav = styled.nav`
         &.active {
           left: 0;
           height: 0;
-          background-color: cyan;
           height: 100%;
           z-index: 100;
-          color: ${(props) => props.theme.bgColor};
         }
       }
     }

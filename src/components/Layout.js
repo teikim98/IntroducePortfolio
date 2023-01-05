@@ -17,6 +17,7 @@ const Container = styled.main`
   left: 70px;
   right: 70px;
   overflow: hidden;
+
   & > div {
     height: 100%;
     display: flex;
@@ -26,9 +27,11 @@ const Container = styled.main`
 const Picture = styled.div`
   
     .bgCover{
+
         background-size: cover;
         height: 650px;
         border-radius: 3vmin;
+        
     }
     
   
@@ -47,9 +50,11 @@ const Picture = styled.div`
 `;
 //컨텐츠
 const Contents = styled.div`
+  border: 4px solid ;
   border-radius: 3vmin;
   width: 100%;
-  background-color: tomato;
+  box-shadow: -5px -5px 5px 5px rgba(163,163,163,0.6) inset; 
+  background-color: #fff;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;

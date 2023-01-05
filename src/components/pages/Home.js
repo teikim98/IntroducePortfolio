@@ -114,10 +114,11 @@ const AnimatedCharacters = (props) => {
 };
 
 const placeholderText = [
-  { type: "heading1", text: "포트폴리오 프로젝트" },
+  { type: "heading1", text: "TY's 포트폴리오" },
+  { type: "heading1", text: "-----" },
   {
     type: "heading2",
-    text: "Test is going Ahead",
+    text: "Welcome to my WebApp!",
   },
 ];
 
