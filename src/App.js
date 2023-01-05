@@ -3,9 +3,16 @@ import { createGlobalStyle } from "styled-components";
 import Header from 'components/Header';
 import Footer from "components/Footer";
 import Router from "components/Router";
+import NeoDunggeunmo from "./font/neodgm.woff2"
 
 //글로벌 스타일
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url(${NeoDunggeunmo}) format('woff');
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +30,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'NeoDunggeunmo';
 	vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 

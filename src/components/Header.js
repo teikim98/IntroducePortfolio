@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-
+import Logo from '../img/Logo.png'
 
 //전체 헤더 컨테이너
 const HeaderNav = styled.header`
@@ -27,6 +27,11 @@ const Nav = styled.nav`
     color: blue;
   }
   .menu {
+    padding:5px;
+    box-shadow:   -5px 0 0 0 black,
+                  5px 0 0 0 black,
+                  0 -5px 0 0 black,
+                  0 5px 0 0 black; 
     ul {
       display: flex;
     }
@@ -65,6 +70,14 @@ const Nav = styled.nav`
   }
 `;
 
+
+const LogoImg = styled.img`
+  width : 10rem;
+  height: 5rem;
+  margin-top: 15px;
+  margin-left: 15px;
+`
+
 export default function Header() {
   const location = useLocation().pathname;
 
@@ -72,9 +85,9 @@ export default function Header() {
     <HeaderNav>
       <Nav>
         <div className="logo">
-          <a href="#">goHome</a>
+          <Link to ='/'><LogoImg src={Logo} alt = 'Logo'></LogoImg></Link>
         </div>
-        <div className="menu">
+        <div className="menu pixel-borders pixel-borders--custom">
           <ul>
             <li>
               <Link
