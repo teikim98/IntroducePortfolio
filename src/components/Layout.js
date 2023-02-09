@@ -25,16 +25,12 @@ const Container = styled.main`
 `;
 //사진 구역
 const Picture = styled.div`
-  
-    .bgCover{
+  .bgCover {
+    background-size: cover;
+    height: 650px;
+    border-radius: 3vmin;
+  }
 
-        background-size: cover;
-        height: 650px;
-        border-radius: 3vmin;
-        
-    }
-    
-  
   &.active {
     width: 30%;
     margin-right: 25px;
@@ -50,10 +46,10 @@ const Picture = styled.div`
 `;
 //컨텐츠
 const Contents = styled.div`
-  border: 4px solid ;
+  border: 4px solid;
   border-radius: 3vmin;
   width: 100%;
-  box-shadow: -5px -5px 5px 5px rgba(163,163,163,0.6) inset; 
+  box-shadow: -5px -5px 5px 5px rgba(163, 163, 163, 0.6) inset;
   background-color: #fff;
   overflow-y: scroll;
   &::-webkit-scrollbar {
@@ -75,19 +71,25 @@ function Layout() {
           className={location === "Home" || location === "/" ? "active" : ""}
         >
           <Swiper
-            modules={ [Autoplay]}
+            modules={[Autoplay]}
             slidesPerView={1}
             loop={true}
             autoplay={{
               delay: 2000,
             }}
           >
-            <SwiperSlide className='bgCover' style={{backgroundImage : `url(${Img})`}}>
-            </SwiperSlide>
-            <SwiperSlide  className='bgCover' style={{backgroundImage : `url(${Img2})`}}>
-            </SwiperSlide>
-            <SwiperSlide  className='bgCover' style={{backgroundImage : `url(${Img3})`}}>
-            </SwiperSlide>
+            <SwiperSlide
+              className="bgCover"
+              style={{ backgroundImage: `url(${Img})` }}
+            ></SwiperSlide>
+            <SwiperSlide
+              className="bgCover"
+              style={{ backgroundImage: `url(${Img2})` }}
+            ></SwiperSlide>
+            <SwiperSlide
+              className="bgCover"
+              style={{ backgroundImage: `url(${Img3})` }}
+            ></SwiperSlide>
           </Swiper>
         </Picture>
         <Contents
