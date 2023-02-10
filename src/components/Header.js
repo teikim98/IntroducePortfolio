@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import Logo from '../img/Logo.png'
+import Logo from "../img/Logo.png";
 
 //전체 헤더 컨테이너
 const HeaderNav = styled.header`
@@ -26,14 +26,10 @@ const Nav = styled.nav`
     color: blue;
   }
   .menu {
-    padding:5px;
-    box-shadow:   -5px 0 0 0 black,
-                  5px 0 0 0 black,
-                  0 -5px 0 0 black,
-                  0 5px 0 0 black,
-                  -3px -3px 0 3px #a3a3a3 inset;
-                  
-                  
+    padding: 5px;
+    box-shadow: -5px 0 0 0 black, 5px 0 0 0 black, 0 -5px 0 0 black,
+      0 5px 0 0 black, -3px -3px 0 3px #a3a3a3 inset;
+
     ul {
       display: flex;
     }
@@ -64,19 +60,20 @@ const Nav = styled.nav`
           height: 0;
           height: 100%;
           z-index: 100;
+          color: blue;
+          transition: all 0.6s ease 0.3s;
         }
       }
     }
   }
 `;
 
-
 const LogoImg = styled.img`
-  width : 10rem;
+  width: 10rem;
   height: 5rem;
   margin-top: 15px;
   margin-left: 15px;
-`
+`;
 
 export default function Header() {
   const location = useLocation().pathname;
@@ -85,7 +82,9 @@ export default function Header() {
     <HeaderNav>
       <Nav>
         <div className="logo">
-          <Link to ='/'><LogoImg src={Logo} alt = 'Logo'></LogoImg></Link>
+          <Link to="/">
+            <LogoImg src={Logo} alt="Logo"></LogoImg>
+          </Link>
         </div>
         <div className="menu pixel-borders pixel-borders--custom">
           <ul>
