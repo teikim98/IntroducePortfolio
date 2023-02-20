@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { data } from "./data";
 
-
 const projectList = {
   hidden: {
     opacity: 0,
@@ -22,10 +21,9 @@ const projectItem = {
   visible: { opacity: 1, x: 0 },
 };
 
-
 const Item = ({ id, title, category, isSelected }) => {
   return (
-    <motion.li className="item"  variants={projectItem}>
+    <motion.li className="item" variants={projectItem}>
       <motion.div layoutId={`item-motion-${id}`}>
         <Link to={`/Project/${id}`} className="link">
           <div className="content">
@@ -33,7 +31,6 @@ const Item = ({ id, title, category, isSelected }) => {
               className="title-motion"
               layoutId={`title-motion-${id}`}
             >
-              <span className="category">{category}</span>
               <h2 className="title">{title}</h2>
             </motion.div>
             <motion.div
@@ -41,7 +38,11 @@ const Item = ({ id, title, category, isSelected }) => {
               aria-hidden="true"
               layoutId={`image-motion-${id}`}
             >
-              <img className="image" src={require(`./images/${id}.jpeg`)} alt="" />
+              <img
+                className="image"
+                src={require(`./images/${id}.jpeg`)}
+                alt=""
+              />
             </motion.div>
           </div>
         </Link>
@@ -52,9 +53,14 @@ const Item = ({ id, title, category, isSelected }) => {
 
 const List = ({ selectedId }) => {
   return (
-    <motion.ul className="list" variants={projectList} initial="hidden" animate="visible" >
+    <motion.ul
+      className="list"
+      variants={projectList}
+      initial="hidden"
+      animate="visible"
+    >
       {data.map((item) => (
-        <Item key={item.id} {...item} isSelected={item.id === selectedId}/>
+        <Item key={item.id} {...item} isSelected={item.id === selectedId} />
       ))}
     </motion.ul>
   );

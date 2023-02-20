@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { data } from "./data";
 
-
 const Article = ({ id }) => {
-  const { category, title } = data.find((data) => data.id === id);
+  const { category, title, para } = data.find((data) => data.id === id);
 
   return (
-    <motion.div 
+    <motion.div
       className="modal"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -23,14 +22,10 @@ const Article = ({ id }) => {
             <span className="category">{category}</span>
             <h2 className="title">{title}</h2>
           </motion.div>
-          <p>
-            Test Word
-          </p>
+          <p>{para}</p>
         </div>
       </motion.div>{" "}
     </motion.div>
-    
-
   );
 };
 
