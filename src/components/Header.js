@@ -9,7 +9,7 @@ const HeaderNav = styled.header`
   width: 100%;
   top: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0;  
   z-index: 1;
 `;
 //네비 컨테이너
@@ -65,6 +65,9 @@ const Nav = styled.nav`
         }
       }
     }
+    @media screen and (max-width: 769px) {
+      display: none;
+    }
   }
 `;
 
@@ -73,6 +76,15 @@ const LogoImg = styled.img`
   height: 5rem;
   margin-top: 15px;
   margin-left: 15px;
+`;
+
+const Hamburger = styled.div`
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  @media screen and (max-width: 769px) {
+    display: block;
+  }
 `;
 
 export default function Header() {
@@ -124,6 +136,7 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <Hamburger></Hamburger>
       </Nav>
     </HeaderNav>
   );
